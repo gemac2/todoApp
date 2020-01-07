@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Create TODO</h1>
+
+    <%= form_for(todo, {action: todoSavePath(), method: "POST"}) { %>
+        <input type="text" name="Title" placeholder="Title"> <br>
+        <input type="text" name="Description" placeholder="Description">
+        <br>
+        <label for="">Is Completed</label>
+        <input type="checkbox" name="Complete"> <br>
+        <input type="submit" value="Save">
+    <% } %>
+</body>
+</html>
